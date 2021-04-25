@@ -1,0 +1,12 @@
+.calendar__header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  margin-top: 80px;
+  align-items: center;
+}
+
+.calendar__action {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 25px;
+}

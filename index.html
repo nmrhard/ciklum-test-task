@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Calendar meeting</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="src/sass/style.scss">
+</head>
+
+<body class="page-body">
+  <main class="page-main">
+    <div class="container">
+      <div class="calendar calendar__header">
+        <h1 class="page-heading">Calendar</h1>
+        <div class="calendar__action">
+          <form class="user-filter" action="#">
+            <select name="user-name" id="user-name" class="user-filter__field">
+              <option value="any" selected>All member</option>
+              <option value="smith">Smith</option>
+              <option value="eva">Eva</option>
+              <option value="adam">Adam</option>
+            </select>
+          </form>
+          <button class="button" type="button">New event +</button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="src/js/controller.js"></script>
+</body>
+
+</html>

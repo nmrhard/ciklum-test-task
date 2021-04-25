@@ -1,0 +1,31 @@
+.user-filter__field {
+  font-family: sans-serif;
+  padding:  var(--size-m);
+  width: 100%;
+  max-width: 100%; 
+  margin: 0;
+  border: 1px solid var(--grey);
+  border-radius: var(--main-radius);
+  appearance: none;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyOTIuNCIgaGVpZ2h0PSIyOTIuNCI+PHBhdGggZmlsbD0iIzAwMDAwMCIgZD0iTTI4NyA2OS40YTE3LjYgMTcuNiAwIDAgMC0xMy01LjRIMTguNGMtNSAwLTkuMyAxLjgtMTIuOSA1LjRBMTcuNiAxNy42IDAgMCAwIDAgODIuMmMwIDUgMS44IDkuMyA1LjQgMTIuOWwxMjggMTI3LjljMy42IDMuNiA3LjggNS40IDEyLjggNS40czkuMi0xLjggMTIuOC01LjRMMjg3IDk1YzMuNS0zLjUgNS40LTcuOCA1LjQtMTIuOCAwLTUtMS45LTkuMi01LjUtMTIuOHoiLz48L3N2Zz4='), linear-gradient(var(--grey), var(--grey));
+  background-repeat: no-repeat, repeat;
+  background-position: right 10px top 50%, 0 0;
+  background-size: 10px auto, 100%;
+  font: inherit;
+  color: var(--basic-white);
+
+  &:focus {
+    box-shadow: 0 0 1px 3px var(--focus);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    outline: none;
+  }
+
+  &::-ms-expand {
+    display: none;
+  }
+}
+
+.user-filter__field option {
+  font-weight:normal;
+  color: var(--basic-black);
+}
