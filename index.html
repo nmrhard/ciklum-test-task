@@ -10,19 +10,19 @@
 
 <body class="page-body">
   <main class="page-main">
-    <div class="container calendar">
-      <div class="calendar__header">
+    <div class="container">
+      <div class=" calendar calendar__header">
         <h1 class="page-heading">Calendar</h1>
         <div class="calendar__action">
-          <form class="user-filter" action="#">
-            <select name="user-name" id="user-name" class="user-filter__field">
+          <form class="calendar__filter" action="#">
+            <select name="user-name" id="user-name" class="select-field">
               <option value="any" selected>All member</option>
               <option value="smith">Smith</option>
               <option value="eva">Eva</option>
               <option value="adam">Adam</option>
             </select>
           </form>
-          <button class="button" type="button">New event +</button>
+          <a class="button" href="create-event.html">New event +</a>
         </div>
       </div>
       <table class="meeting">

@@ -1,4 +1,4 @@
-.user-filter__field {
+.select-field {
   font-family: sans-serif;
   padding:  var(--size-m);
   width: 100%;
@@ -25,7 +25,7 @@
   }
 }
 
-.user-filter__field option {
+.select-field option {
   font-weight:normal;
   color: var(--basic-black);
 }
