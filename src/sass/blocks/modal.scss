@@ -1,0 +1,19 @@
+.modal {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 400px;
+  background-color: var(--darkset-grey);
+  padding: 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  color: var(--basic-white);
+  border-radius: var(--main-radius);
+  z-index: 1000;
+}
+
+.modal__action {
+  display: flex;
+  justify-content: center;
+  column-gap: 20px;
+}
