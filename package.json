@@ -1,0 +1,27 @@
+{
+  "name": "ciklum-test-task",
+  "version": "1.0.0",
+  "description": "Simple meeting plaining calendar for a meeing room",
+  "main": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nmrhard/ciklum-test-task.git"
+  },
+  "author": "nmrhard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nmrhard/ciklum-test-task/issues"
+  },
+  "homepage": "https://github.com/nmrhard/ciklum-test-task#readme",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.0.0-beta.2",
+    "parcel": "^2.0.0-beta.2"
+  },
+  "dependencies": {
+    "core-js": "^3.11.0"
+  }
+}

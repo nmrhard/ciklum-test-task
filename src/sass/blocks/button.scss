@@ -1,0 +1,31 @@
+.button {
+  padding: var(--size-m);
+  border: 1px solid var(--grey);
+  background-color: var(--grey);
+  border-radius: var(--main-radius);
+  color: var(--basic-white);
+  font: inherit;
+  appearance: none;
+  transition: 0.3s;
+
+  &:hover {
+    border: 1px solid var(--darken-grey);
+    background-color: var(--darken-grey);
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 1px 3px var(--focus);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    outline: none;
+  }
+
+  &--success {
+    background-color: var(--green);
+    color: var(--basic-black);
+  }
+
+  &--success:hover {
+    background-color: var(--darken-green);
+    color: var(--basic-white);
+  }
+}

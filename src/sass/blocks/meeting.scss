@@ -1,0 +1,39 @@
+.meeting {
+  width: 100%;
+  table-layout: fixed;
+  border: 1px solid var(--darken-grey);
+  border-collapse: collapse;
+}
+
+.meeting__remove {
+  background-color: transparent;
+  border: none;
+  color: var(--basic-black);
+  cursor: pointer;
+}
+
+.meeting__remove:hover {
+  color: var(--darken-grey);
+}
+
+th {
+  background-color: var(--grey);
+  color: var(--basic-white);
+}
+
+th, td {
+  padding: 9px 15px;
+  border: 1px solid var(--darken-grey);
+  text-align: center;
+}
+
+.meeting__reserved {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  background-color: var(--green);
+}
+
+.meeting__name {
+  text-align: left;
+}
