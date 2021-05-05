@@ -2,6 +2,7 @@ import { WORK_DAYS, SLOTS_TIME_COUNT } from './../config.js';
 
 class calendarView {
   _parentElement = document.querySelector('.meeting__data');
+  _innerPage = document.querySelector('.page-main--inner');
 
   _createTableElement(el, count, time, day = 0) {
     const fragment = document.createDocumentFragment();
@@ -33,7 +34,9 @@ class calendarView {
       row.appendChild(fragment);
     });
 
-    this._parentElement.appendChild(rows);
+    if(!this._innerPage) {
+      this._parentElement.appendChild(rows);
+    }
   }
 }
 
