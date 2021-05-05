@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Calendar meeting</title>
+  <meta charset="utf-8">gti
+  <title>Create meeting</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="src/sass/style.scss">
 </head>
@@ -15,11 +15,11 @@
       <form class="event">
         <div class="event__row">
           <label for="event-name" class="event__name-field">Name of the event:</label>
-          <input class="input-field" type="text" name="event-name" id="event-name" required>
+          <input class="input-field" type="text" name="meetingName" id="event-name" required>
         </div>
         <div class="event__row">
           <label for="event-paticipants" class="event__name-field">Paticipants:</label>
-          <select name="event-paticipants" id="event-paticipants" class="select-field" required>
+          <select name="user" id="event-paticipants" class="select-field" required>
             <option value="any" selected>All member</option>
             <option value="smith">Smith</option>
             <option value="eva">Eva</option>
@@ -28,17 +28,17 @@
         </div>
         <div class="event__row">
           <label for="event-day" class="event__name-field">Day:</label>
-          <select name="event-day" id="event-day" class="select-field" required>
-            <option value="monday" selected>Monday</option>
-            <option value="tuesday">Tuesday</option>
-            <option value="wednesday">Wednesday</option>
-            <option value="thursday">Thursday</option>
-            <option value="friday">Friday</option>
+          <select name="day" id="event-day" class="select-field" required>
+            <option value="0" selected>Monday</option>
+            <option value="1">Tuesday</option>
+            <option value="2">Wednesday</option>
+            <option value="3">Thursday</option>
+            <option value="4">Friday</option>
           </select>
         </div>
         <div class="event__row">
           <label for="event-time" class="event__name-field">Time:</label>
-          <select name="event-time" id="event-time" class="select-field" required>
+          <select name="time" id="event-time" class="select-field" required>
             <option value="10" selected>10:00</option>
             <option value="11">11:00</option>
             <option value="12">12:00</option>
