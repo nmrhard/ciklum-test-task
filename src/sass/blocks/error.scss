@@ -1,0 +1,17 @@
+.error {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: var(--light-red);
+  color: var(--red);
+}
+
+.error__btn-close {
+  font-size: 22px;
+  align-content: flex-end;
+  border: none;
+  background-color: transparent;
+  color: var(--red);
+  cursor: pointer;
+}
