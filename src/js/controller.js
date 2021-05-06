@@ -8,14 +8,20 @@ const getMeetings = function() {
   return model.meetings; 
 }
 
-const controladdMeeting = function(newMeeting) {
-  model.addMeeting(newMeeting);
-  meetingView.render(newMeeting);
+const controlAddMeeting = function(newMeeting) {
+  if(model.checkIsTimeSlotFree(newMeeting)) {
+    model.addMeeting(newMeeting);
+    meetingView.render(newMeeting);
+    
+    return true;
+  }
+
+  return false;
 }
 
 const init = function() {
   calendarView.generateMarkup();
-  addMeetingView.addHandlerShowWindow(controladdMeeting);
+  addMeetingView.addHandlerShowWindow(controlAddMeeting);
 }
 
 init();

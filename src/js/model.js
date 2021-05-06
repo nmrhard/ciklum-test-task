@@ -1,13 +1,3 @@
-class Meeting {
-  constructor(name, user, day, time) {
-    this.id = (Date.now() + '').slice(-10),
-    this.meetingName = name,
-    this.user = user,
-    this.day = day,
-    this.time = time
-  }
-}
-
 class Calendar {
   constructor() {
     this.meetings = [
@@ -35,6 +25,16 @@ class Calendar {
   filterByUser() {
     const filteredMeeting = this.meetings.filter(meeting => meeting.user === user);
     return filteredMeeting;
+  }
+
+  checkIsTimeSlotFree(newMeeting) {
+    for (let i=0; i < this.meetings.length; i++) {
+      if ((this.meetings[i].day === newMeeting.day) && (this.meetings[i].time === newMeeting.time)) {
+        return false;
+      }
+    };
+    
+    return true;
   }
 }
 
