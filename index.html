@@ -16,13 +16,13 @@
         <div class="calendar__action">
           <form class="calendar__filter" action="#">
             <select name="user-name" id="user-name" class="select-field">
-              <option value="any" selected>All member</option>
+              <option value="any" selected>All members</option>
               <option value="smith">Smith</option>
               <option value="eva">Eva</option>
               <option value="adam">Adam</option>
             </select>
           </form>
-          <a class="button" href="create-event.html">New event +</a>
+          <a class="button button__new-event" href="create-event.html">New event +</a>
         </div>
       </div>
       <table class="meeting">
@@ -36,85 +36,7 @@
             <th>Fri</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>10:00</td>
-            <td class="meeting__reserved">
-              <span class="meeting__name">Daily Standup</span>
-              <button class="meeting__remove" type="button">X</button>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>11:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>12:00</td>
-            <td></td>
-            <td class="meeting__reserved">
-              <span class="meeting__name">Plaining session</span>
-              <button class="meeting__remove" type="button">X</button>
-            </td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>13:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>14:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>15:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>16:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>17:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>18:00</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
+        <tbody class="meeting__data">
         </tbody>
       </table>
     </div>
