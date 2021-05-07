@@ -16,6 +16,7 @@ class AddMeetingView {
       formWindow.addEventListener('load', function() {
         const form = formWindow.document.querySelector('.event');
         const error = formWindow.document.querySelector('.error');
+        const btnCancel = form.querySelector('.button__cancel');
       
         form.addEventListener('submit', function(evt) {
           evt.preventDefault();
@@ -30,6 +31,10 @@ class AddMeetingView {
               error.classList.add('hidden');
             });
           }
+        });
+        
+        btnCancel.addEventListener('click', function() {
+          formWindow.close();
         });
       });
     });
