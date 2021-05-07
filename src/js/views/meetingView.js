@@ -3,6 +3,9 @@ class MeetingView {
   _parentElement = document.querySelector('.meeting__data');
 
   _generateMarkup() {
+    const meetingWrap = document.createElement('div');
+    meetingWrap.classList.add('meeting__wrap');
+
     const meetingName = document.createElement('span');
     meetingName.classList.add('meeting__name');
     meetingName.innerText = this._data.meetingName;
@@ -13,8 +16,9 @@ class MeetingView {
     meetingDeleteBtn.innerText = 'X';
 
     const fragemnt = document.createDocumentFragment();
-    fragemnt.appendChild(meetingName);
-    fragemnt.appendChild(meetingDeleteBtn);
+    meetingWrap.appendChild(meetingName);
+    meetingWrap.appendChild(meetingDeleteBtn);
+    fragemnt.appendChild(meetingWrap);
 
     return fragemnt;
   }

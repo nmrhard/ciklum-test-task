@@ -28,10 +28,13 @@ th, td {
 }
 
 .meeting__reserved {
+  background-color: var(--green);
+}
+
+.meeting__wrap {
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-  background-color: var(--green);
 }
 
 .meeting__name {
