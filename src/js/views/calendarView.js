@@ -1,17 +1,19 @@
-import { WORK_DAYS, SLOTS_TIME_COUNT } from './../config.js';
+import { WORK_DAYS, SLOTS_TIME_COUNT } from '../config';
 
-class calendarView {
+class CalendarView {
   _parentElement = document.querySelector('.meeting__data');
+
   _innerPage = document.querySelector('.page-main--inner');
 
   _createTableElement(el, count, time, day = 0) {
+    let meetingDay = day;
     const fragment = document.createDocumentFragment();
 
     for (let i = 0; i < count; i++) {
       const newEl = document.createElement(el);
       if (time >= 0) {
         newEl.setAttribute('data-time', time);
-        newEl.setAttribute('data-day', day++);
+        newEl.setAttribute('data-day', meetingDay++);
       }
       fragment.appendChild(newEl);
     }
@@ -34,10 +36,10 @@ class calendarView {
       row.appendChild(fragment);
     });
 
-    if(!this._innerPage) {
+    if (!this._innerPage) {
       this._parentElement.appendChild(rows);
     }
   }
 }
 
-export default new calendarView();
+export default new CalendarView();
