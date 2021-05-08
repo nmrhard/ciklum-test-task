@@ -12,6 +12,7 @@
         "no-plusplus": "off",
         "no-underscore-dangle": ["error", { "allowAfterThis": true }],
         "class-methods-use-this": "off",
+        "prefer-arrow-callback": "off",
         "prettier/prettier": ["error", {
             "endOfLine":"auto"
         }]

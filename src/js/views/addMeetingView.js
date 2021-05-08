@@ -13,7 +13,7 @@ class AddMeetingView {
       return;
     }
 
-    this._btnOpen.addEventListener('click', (evt) => {
+    this._btnOpen.addEventListener('click', function (evt) {
       evt.preventDefault();
 
       const formWindow = window.open(
@@ -21,12 +21,12 @@ class AddMeetingView {
         '_blank',
         'toolbar=0,location=0,menubar=0,width=900,height=600'
       );
-      formWindow.addEventListener('load', () => {
+      formWindow.addEventListener('load', function () {
         const form = formWindow.document.querySelector('.event');
         const error = formWindow.document.querySelector('.error');
         const btnCancel = form.querySelector('.button__cancel');
 
-        form.addEventListener('submit', (evtForm) => {
+        form.addEventListener('submit', function (evtForm) {
           evtForm.preventDefault();
 
           const dataArr = [...new FormData(this)];

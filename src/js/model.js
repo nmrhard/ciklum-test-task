@@ -26,7 +26,6 @@ class Calendar {
       time: newMeeting.time,
     };
 
-    console.log(meeting);
     this.meetings.push(meeting);
   }
 
