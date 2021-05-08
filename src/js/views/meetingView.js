@@ -1,5 +1,6 @@
 class MeetingView {
   _data;
+
   _parentElement = document.querySelector('.meeting__data');
 
   _generateMarkup() {
@@ -24,10 +25,12 @@ class MeetingView {
   }
 
   render(data) {
-    this._data =  data;
+    this._data = data;
     const markup = this._generateMarkup();
 
-    const meetingCell = this._parentElement.querySelector(`[data-day='${this._data.day}'][data-time='${this._data.time}']`);
+    const meetingCell = this._parentElement.querySelector(
+      `[data-day='${this._data.day}'][data-time='${this._data.time}']`
+    );
     meetingCell.appendChild(markup);
     meetingCell.classList.add('meeting__reserved');
   }
