@@ -24,6 +24,22 @@ class MeetingView {
     return fragemnt;
   }
 
+  addHandlerDeleteMeeting(handler) {
+    this._parentElement.addEventListener('click', function (evt) {
+      const btnDelete = evt.target.closest('.meeting__remove');
+
+      if (!btnDelete) {
+        return;
+      }
+
+      const meetingCol = evt.target.closest('.meeting__reserved');
+      const { day, time } = meetingCol.dataset;
+      handler(day, time);
+      meetingCol.innerHTML = '';
+      meetingCol.removeAttribute('class');
+    });
+  }
+
   render(data) {
     this._data = data;
     const markup = this._generateMarkup();

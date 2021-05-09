@@ -14,9 +14,14 @@ const controlAddMeeting = function (newMeeting) {
   return false;
 };
 
+const controlDeleteMeeting = function (day, time) {
+  model.deleteMeeting(+day, +time);
+};
+
 const init = function () {
   calendarView.generateMarkup();
   addMeetingView.addHandlerShowWindow(controlAddMeeting);
+  meetingView.addHandlerDeleteMeeting(controlDeleteMeeting);
 };
 
 init();
