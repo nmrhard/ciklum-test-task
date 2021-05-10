@@ -1,7 +1,17 @@
+import modalView from './modalView';
+
 class MeetingView {
   _data;
 
   _parentElement = document.querySelector('.meeting__data');
+
+  _modal = document.querySelector('.modal');
+
+  _overlay = document.querySelector('.overlay');
+
+  constructor() {
+    this._addHandlerDeleteMeeting();
+  }
 
   _generateMarkup() {
     const meetingWrap = document.createElement('div');
@@ -22,6 +32,19 @@ class MeetingView {
     fragemnt.appendChild(meetingWrap);
 
     return fragemnt;
+  }
+
+  _addHandlerDeleteMeeting() {
+    this._parentElement.addEventListener('click', function (evt) {
+      const btnDelete = evt.target.closest('.meeting__remove');
+
+      if (!btnDelete) {
+        return;
+      }
+
+      const meeting = evt.target.closest('.meeting__reserved');
+      modalView.showModal(meeting);
+    });
   }
 
   render(data) {

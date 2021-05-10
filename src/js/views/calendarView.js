@@ -21,7 +21,7 @@ class CalendarView {
     return fragment;
   }
 
-  generateMarkup() {
+  _generateMarkup() {
     const rows = this._createTableElement('tr', SLOTS_TIME_COUNT);
     const rowsTime = rows.querySelectorAll('tr');
 
@@ -36,8 +36,12 @@ class CalendarView {
       row.appendChild(fragment);
     });
 
+    return rows;
+  }
+
+  render() {
     if (!this._innerPage) {
-      this._parentElement.appendChild(rows);
+      this._parentElement.appendChild(this._generateMarkup());
     }
   }
 }

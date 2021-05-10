@@ -37,13 +37,13 @@ class AddMeetingView {
             error.classList.remove('hidden');
             error
               .querySelector('.error__btn-close')
-              .addEventListener('click', () => {
+              .addEventListener('click', function () {
                 error.classList.add('hidden');
               });
           }
         });
 
-        btnCancel.addEventListener('click', () => {
+        btnCancel.addEventListener('click', function () {
           formWindow.close();
         });
       });
