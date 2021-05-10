@@ -3,6 +3,7 @@ import model from './model';
 import calendarView from './views/calendarView';
 import meetingView from './views/meetingView';
 import addMeetingView from './views/addMeetingView';
+import modalView from './views/modalView';
 
 const controlAddMeeting = function (newMeeting) {
   if (model.checkIsTimeSlotFree(newMeeting)) {
@@ -10,18 +11,17 @@ const controlAddMeeting = function (newMeeting) {
     meetingView.render(newMeeting);
     return true;
   }
-
   return false;
 };
 
-const controlDeleteMeeting = function (day, time) {
+const removeMeeting = function (day, time) {
   model.deleteMeeting(+day, +time);
 };
 
 const init = function () {
-  calendarView.generateMarkup();
+  calendarView.render();
   addMeetingView.addHandlerShowWindow(controlAddMeeting);
-  meetingView.addHandlerDeleteMeeting(controlDeleteMeeting);
+  modalView.addHandlerBtnConfirm(removeMeeting);
 };
 
 init();
