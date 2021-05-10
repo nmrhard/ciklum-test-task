@@ -6,7 +6,7 @@ class Calendar {
         meetingName: 'Daily Standup',
         user: 'smith',
         day: 0,
-        time: 10,
+        time: 11,
       },
       {
         id: 2,
@@ -27,16 +27,12 @@ class Calendar {
       time: +newMeeting.time,
     };
 
-    console.log(meeting);
-
     this.meetings.push(meeting);
-
-    console.log(this.meetings);
   }
 
   deleteMeeting(day, time) {
     this.meetings = this.meetings.filter(
-      (meeting) => meeting.day !== day && meeting.time !== time
+      (meeting) => meeting.day !== day || meeting.time !== time
     );
   }
 
