@@ -47,8 +47,24 @@ class MeetingView {
     });
   }
 
+  clearMeeting() {
+    const meetings = this._parentElement.querySelectorAll('.meeting__reserved');
+
+    if (meetings) {
+      meetings.forEach((meeting) => {
+        meeting.innerHTML = '';
+        meeting.removeAttribute('class');
+      });
+    }
+  }
+
   render(data) {
+    if (!data) {
+      return;
+    }
+
     this._data = data;
+
     const markup = this._generateMarkup();
 
     const meetingCell = this._parentElement.querySelector(
