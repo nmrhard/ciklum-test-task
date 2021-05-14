@@ -37,10 +37,9 @@ class Calendar {
   }
 
   filterByUser(user) {
-    const filteredMeeting = this.meetings.filter(
-      (meeting) => meeting.user === user
-    );
-    return filteredMeeting;
+    return user === 'any'
+      ? this.meetings
+      : this.meetings.filter((meeting) => meeting.user === user);
   }
 
   checkIsTimeSlotFree(newMeeting) {
