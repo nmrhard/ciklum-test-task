@@ -47,6 +47,10 @@ class MeetingView {
     });
   }
 
+  addHandlerRender(handler) {
+    window.addEventListener('load', handler);
+  }
+
   clearMeeting() {
     const meetings = this._parentElement.querySelectorAll('.meeting__reserved');
 

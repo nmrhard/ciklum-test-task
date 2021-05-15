@@ -1,21 +1,10 @@
 class Calendar {
   constructor() {
-    this.meetings = [
-      {
-        id: 1,
-        meetingName: 'Daily Standup',
-        user: 'smith',
-        day: 0,
-        time: 11,
-      },
-      {
-        id: 2,
-        meetingName: 'Plaining session',
-        user: 'smith',
-        day: 1,
-        time: 11,
-      },
-    ];
+    this.meetings = JSON.parse(localStorage.getItem('meetings')) || [];
+  }
+
+  _persistMeeting() {
+    localStorage.setItem('meetings', JSON.stringify(this.meetings));
   }
 
   addMeeting(newMeeting) {
@@ -28,12 +17,15 @@ class Calendar {
     };
 
     this.meetings.push(meeting);
+    this._persistMeeting();
   }
 
   deleteMeeting(day, time) {
     this.meetings = this.meetings.filter(
       (meeting) => meeting.day !== day || meeting.time !== time
     );
+
+    this._persistMeeting();
   }
 
   filterByUser(user) {
