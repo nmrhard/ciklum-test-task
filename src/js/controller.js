@@ -22,11 +22,18 @@ const controlRemoveMeeting = function (day, time) {
 const controlFilterMeeting = function (user) {
   const filteredByUser = model.filterByUser(user);
   meetingView.clearMeeting();
-  filteredByUser.forEach((meeting) => meetingView.render(meeting, false));
+  filteredByUser.forEach((meeting) => meetingView.render(meeting));
+};
+
+const controlMeetings = function () {
+  model.meetings.forEach((meeting) => {
+    meetingView.render(meeting);
+  });
 };
 
 const init = function () {
   calendarView.render();
+  meetingView.addHandlerRender(controlMeetings);
   addMeetingView.addHandlerShowWindow(controlAddMeeting);
   modalView.addHandlerBtnConfirm(controlRemoveMeeting);
   filterView.addHandlerChangeUser(controlFilterMeeting);
