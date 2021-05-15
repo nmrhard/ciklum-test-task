@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/63d26d03-72a7-4818-850d-ab60b54688ec/deploy-status)](https://app.netlify.com/sites/calendar-meeting/deploys)
+
 # Simple meeting plaining calendar for a meeing room
 
 ## Setup
